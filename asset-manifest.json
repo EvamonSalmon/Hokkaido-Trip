@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Hokkaido-Trip/static/css/main.43c7e895.css",
+    "main.js": "/Hokkaido-Trip/static/js/main.5186dc87.js",
+    "index.html": "/Hokkaido-Trip/index.html",
+    "main.43c7e895.css.map": "/Hokkaido-Trip/static/css/main.43c7e895.css.map",
+    "main.5186dc87.js.map": "/Hokkaido-Trip/static/js/main.5186dc87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43c7e895.css",
+    "static/js/main.5186dc87.js"
+  ]
+}
