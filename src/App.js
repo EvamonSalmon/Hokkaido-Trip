@@ -46,6 +46,8 @@ function getColorByDay(day) {
 function AddMarkerOnClick({ onAdd }) {
   useMapEvents({
     click(e) {
+      if (viewOnly) return;
+      
       const name = prompt("ชื่อสถานที่");
       if (!name) return;
 
