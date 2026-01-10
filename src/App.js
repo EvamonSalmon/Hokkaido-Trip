@@ -13,6 +13,7 @@ import "leaflet-control-geocoder/dist/Control.Geocoder.css";
 import "leaflet-control-geocoder";
 
 import "./App.css";
+const VIEW_ONLY = true;
 
 /* ================= ICON ================= */
 function createIcon(color) {
@@ -28,14 +29,14 @@ function createIcon(color) {
 
 /* ================= DAYS ================= */
 const dayOptions = [
-  { value: "Day 1", label: "Day 1 (7 Mar)", color: "blue" },
-  { value: "Day 2", label: "Day 2 (8 Mar)", color: "green" },
-  { value: "Day 3", label: "Day 3 (9 Mar)", color: "orange" },
-  { value: "Day 4", label: "Day 4 (10 Mar)", color: "red" },
-  { value: "Day 5", label: "Day 5 (11 Mar)", color: "violet" },
-  { value: "Day 6", label: "Day 6 (12 Mar)", color: "yellow" },
-  { value: "Day 7", label: "Day 7 (13 Mar)", color: "black" },
-  { value: "Day 8", label: "Day 8 (14 Mar)", color: "grey" },
+  { value: "Day 1", label: "Day 1 (7 Mar) SAT", color: "violet" },
+  { value: "Day 2", label: "Day 2 (8 Mar) SUN", color: "red" },
+  { value: "Day 3", label: "Day 3 (9 Mar) MON", color: "gold" },
+  { value: "Day 4", label: "Day 4 (10 Mar) TUE", color: "yellow" },
+  { value: "Day 5", label: "Day 5 (11 Mar) WED", color: "green" },
+  { value: "Day 6", label: "Day 6 (12 Mar) THU", color: "orange" },
+  { value: "Day 7", label: "Day 7 (13 Mar) FRI", color: "blue" },
+  { value: "Day 8", label: "Day 8 (14 Mar) SAT", color: "grey" },
 ];
 
 function getColorByDay(day) {
@@ -43,7 +44,9 @@ function getColorByDay(day) {
 }
 
 /* ============ ADD MARKER ============ */
-function AddMarkerOnClick({ onAdd }) {
+function AddMarkerOnClick({ onAdd, viewOnly }) {
+
+  
   useMapEvents({
     click(e) {
       const name = prompt("ชื่อสถานที่");
