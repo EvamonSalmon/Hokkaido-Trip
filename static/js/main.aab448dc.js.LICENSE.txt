@@ -3,15 +3,6 @@
  * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
-/* @preserve
- * Leaflet Control Geocoder
- * https://github.com/perliedman/leaflet-control-geocoder
- *
- * Copyright (c) 2012 sa3m (https://github.com/sa3m)
- * Copyright (c) 2018 Per Liedman
- * All rights reserved.
- */
-
 /**
  * @license React
  * react-dom-client.production.js
