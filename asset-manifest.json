@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Hokkaido-Trip/static/css/main.aa34c905.css",
-    "main.js": "/Hokkaido-Trip/static/js/main.e0f14b65.js",
-    "index.html": "/Hokkaido-Trip/index.html",
-    "main.aa34c905.css.map": "/Hokkaido-Trip/static/css/main.aa34c905.css.map",
-    "main.e0f14b65.js.map": "/Hokkaido-Trip/static/js/main.e0f14b65.js.map"
+    "main.css": "/static/css/main.aa34c905.css",
+    "main.js": "/static/js/main.a6348158.js",
+    "index.html": "/index.html",
+    "main.aa34c905.css.map": "/static/css/main.aa34c905.css.map",
+    "main.a6348158.js.map": "/static/js/main.a6348158.js.map"
   },
   "entrypoints": [
     "static/css/main.aa34c905.css",
-    "static/js/main.e0f14b65.js"
+    "static/js/main.a6348158.js"
   ]
 }
