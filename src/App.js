@@ -94,15 +94,40 @@ function App() {
   const markerRefs = useRef({});
 
   /* ===== state ===== */
-  const [places, setPlaces] = useState(() => {
-    const saved = localStorage.getItem("hokkaido-places");
-    return saved ? JSON.parse(saved) : [];
-  });
+const [places, setPlaces] = useState([]);
+const loadedRef = useRef(false);
 
-  /* ===== autosave ===== */
-  useEffect(() => {
-    localStorage.setItem("hokkaido-places", JSON.stringify(places));
-  }, [places]);
+useEffect(() => {
+  console.log("🔥 loading places");
+
+  const saved = localStorage.getItem("hokkaido-places");
+
+  if (saved) {
+    console.log("📦 load from localStorage");
+    setPlaces(JSON.parse(saved));
+    loadedRef.current = true;
+    return;
+  }
+
+  fetch(process.env.PUBLIC_URL + "/places.json")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("🌍 load from places.json", data);
+      setPlaces(data);
+      loadedRef.current = true;
+    })
+    .catch((err) =>
+      console.error("❌ failed to load places.json", err)
+    );
+}, []);
+
+useEffect(() => {
+  if (!loadedRef.current) return;
+  console.log("💾 autosave places");
+  localStorage.setItem("hokkaido-places", JSON.stringify(places));
+}, [places]);
+
+
 
   /* ===== helpers ===== */
   function updatePlace(id, field, value) {
